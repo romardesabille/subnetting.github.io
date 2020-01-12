@@ -11,13 +11,14 @@ function calculate(){
 
     let row = 0;
     /*
-    let given = '192.168.64.0';
+    let given = '192.168.60.160';
     let prefix = 21;
     let host = 64 + 2;
     */
    let given = parseInt(given_);
    let prefix = parseInt(prefix_);
    let host = parseInt(host_) + 2;
+   
     let bin = 32 - prefix;
     let ip_arr = given_.split('.');
     
@@ -31,13 +32,13 @@ function calculate(){
         if (h == 256) {
             twoN_sup = 0;
         }
-
         num = 256 - h;
+        
         let twoN = Math.pow(2, twoN_sup);
         twoN_sup++;
 
         if (h == host) {
-            increment = Math.pow(2, twoN_sup + 1);
+            increment = Math.pow(2, twoN_sup);
             break;
         }
         if (h > host) {
@@ -94,6 +95,9 @@ function calculate(){
 
     row = 0;
     let cbAddr = 0;
+    console.log(num);
+
+    console.log(c+increment);
     for (let i = ip_arr[2]; i <= 255; ) {
         let newRow = table1.insertRow(row);
 
@@ -108,8 +112,9 @@ function calculate(){
 
         c += increment;
         cbAddr += increment - 1;
-
+     
         if (c > num) {
+            
             c = parseInt(ip_arr[3]);
             cbAddr = 255;
             b += 1;
@@ -124,5 +129,13 @@ function calculate(){
         row++;
     }
 };
+
+
+/*
+    192.168.60.160
+    21
+    30
+
+*/ 
 
 

@@ -30,7 +30,7 @@ section form input{
 }
 
 section input#given{
-    margin-left: 15px;
+    margin-left: 23px;
 }
 
 section input#prefix{
@@ -40,6 +40,7 @@ section input#prefix{
 section input#host{
     margin-top: 15px;
     width: 100px;
+    margin-left: 11px;
 }
 
 button{
@@ -76,6 +77,8 @@ section div.container{
 }
 
 
+
+
 @media screen and (max-width:800px){
     div.box{
         width: 100%;
@@ -86,3 +89,33 @@ section div.container{
     }
 }
 
+@media screen and (max-width:500px){
+    section form{
+        width: 300px;
+        margin-left: 5vh;
+    }
+
+    section input#given{
+        margin-right: 80px;
+    }
+
+    section input#prefix{
+        margin-top: 15px;
+    }
+
+    button{
+        margin-left: 200px; 
+    }
+
+    table{
+        font-size: 14px;
+    }
+    
+    
+}
+
+@media screen and (max-width:500px){
+    table{
+        font-size: 13px;
+    }    
+}
