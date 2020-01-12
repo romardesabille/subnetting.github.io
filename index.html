@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>Subnetting</header>
+
+    <section>
+        <form>
+            IP: <input id="given" type="text" name="given" autocomplete="off">
+            Prefix: <input id="prefix" type="text" name="prefix" autocomplete="off">
+            <br>
+            Host: <input id="host" type="text" name="host" autocomplete="off">
+            <br>
+            <button onclick="calculate(); return false;">Confirm</button>
+        </form>
+
+        <div class="container">
+            <div class="box">
+                <div id="bin"></div>
+                <div id="sn"></div>
+                <div id="prefixx"></div>
+                <br>
+                <div id="text"></div>
+            </div>
+
+            <div class="box">
+                <table border="1" id="table2">
+                    <thead>
+                        <tr>
+                            <th>Network Address</th>
+                            <th colspan ="2">Host Address</th>
+                            <th >Brodcast Address</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="javascript/app.js"></script>
+</body>
+</html>
